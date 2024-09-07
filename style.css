@@ -1,0 +1,782 @@
+/* VARIABLES */
+
+.dark {
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-400);
+    --text-tertiary: var(--gray-500);
+    --text-quaternary: var(--gray-600);
+    --text-error: #f93a37;
+    --border-light: hsla(0, 0%, 100%, .1);
+    --border-medium: hsla(0, 0%, 100%, .15);
+    --border-heavy: hsla(0, 0%, 100%, .2);
+    --border-xheavy: hsla(0, 0%, 100%, .25);
+    --border-sharp: hsla(0, 0%, 100%, .05);
+    --main-surface-primary: var(--gray-800);
+    --main-surface-secondary: var(--gray-750);
+    --main-surface-tertiary: var(--gray-700);
+    --sidebar-surface-primary: var(--gray-900);
+    --sidebar-surface-secondary: var(--gray-800);
+    --sidebar-surface-tertiary: var(--gray-750);
+    --link: #7ab7ff;
+    --link-hover: #5e83b3;
+    --surface-error: 249 58 55;
+}
+
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --gray-50: #f9f9f9;
+    --gray-100: #ececec;
+    --gray-200: #e3e3e3;
+    --gray-300: #cdcdcd;
+    --gray-400: #b4b4b4;
+    --gray-500: #9b9b9b;
+    --gray-600: #676767;
+    --gray-700: #424242;
+    --gray-750: #2f2f2f;
+    --gray-800: #212121;
+    --gray-900: #171717;
+    --gray-950: #0d0d0d;
+    --red-500: #ef4444;
+    --red-700: #b91c1c;
+    --brand-purple: #ab68ff;
+}
+
+
+/* Common Classes */
+
+.heading {
+    color: var(--gray-100);
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 5px;
+}
+
+.heading-secondary {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.paragraph {
+    color: var(--gray-100);
+    font-family: "Lora", serif;
+    font-size: 20px;
+    width: 75%;
+    margin: auto;
+    letter-spacing: 1.2px;
+}
+
+.paragraph-secondary {
+    font-size: 12.5px;
+}
+
+
+.center {
+    width: 70%;
+    margin: auto;
+}
+
+
+hr {
+    background: var(--red-700);
+    height: 2px;
+    border: none;
+    width: 75%;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray-100);
+}
+
+
+a:hover {
+    color: var(--red-700);
+    transition: 0.5s ease-in-out;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: red solid 2px; */
+}
+
+html{
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--gray-950);
+    
+}
+
+/* HEADER */
+
+#header {
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--gray-600);
+    height: 100px;
+    border-bottom: var(--red-700) solid 2px;
+}
+
+#header .navigation {
+    width: 70%;
+    padding-top: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+
+#header .navigation i {
+    display: none;
+    font-size: 30px;
+    margin-top: 30px;
+    color: var(--gray-100);
+}
+
+#header .navigation i:active {
+    color: var(--gray-750);
+}
+
+#header ul.mobile {
+    background: var(--gray-600);
+    padding: 15px;
+    margin-top: -2px;
+    padding-top: 0;
+    display: none;
+    border-bottom: var(--red-700) solid 2px;
+}
+
+#header ul.mobile li {
+    display: block;
+    margin: 10px;
+    list-style: none;
+    font-size: 20px;
+}
+
+
+
+
+#header ul.desktop {
+    display: inline-block;
+}
+
+#header ul.desktop li {
+    display: inline;
+    margin-left: 50px;
+    margin-right: 50px;
+    list-style: none;
+    font-size: 30px;
+}
+
+
+#header .logo {
+    width: 40px;
+    margin-bottom: -10px;
+}
+
+
+
+/* Info Banner */
+
+
+.container {
+    padding-top: 350px;
+    padding-bottom: 350px;
+    margin-bottom: 100px;
+    background: url(school.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--gray-400);
+    border-bottom: var(--red-700) solid 2px;
+}
+
+.container .info {
+    width: 45%;
+    margin: auto;
+    text-align: center;
+}
+
+.container .info .heading span{
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+
+/* ABOUT */
+
+#about {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--gray-600);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#about .property {
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 17%;
+    text-align: center;
+    padding: 15px;
+    border: var(--red-700) dashed 2px;
+}
+
+#about .property img{
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    border: var(--red-700) solid 2px;
+}
+
+
+/* OUR TEAM */
+
+
+#team {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#team .worker {
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: var(--gray-600);
+    width: 23%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#team .worker img{
+    width: 200px;
+    margin: auto;
+    border-radius: 50%;
+    border: var(--red-500) solid 2px;
+}
+
+
+
+
+/* UNION */
+
+#union {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--gray-600);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#union .student-union {
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: var(--gray-600);
+    width: 20%;
+    text-align: center;
+    padding: 15px;
+    border: var(--red-700) dashed 2px;
+}
+
+#union .student-union img{
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    border: var(--red-700) solid 2px;
+}
+
+
+/* FOOTER */
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 100px;
+    border-top: var(--red-700) solid 2px;
+    padding: 50px;
+    background: var(--gray-600);
+}
+
+#footer .contact * {
+    padding: 10px;
+    /* border: var(--red-700) solid 2px; */
+}
+
+#footer .contact {
+    width: 30%;
+    margin: auto;
+}
+
+#footer .contact i {
+    color: var(--gray-100);
+    margin: auto;
+    margin-left: 30px;
+    margin-bottom: -30px;
+    font-size: 25px;
+}
+
+
+
+#footer .contact * p{
+    width: 70%;
+    margin-top: -38px;
+}
+
+
+#footer .school p{
+    text-align: left;
+    width: 95%;
+    margin-top: 10px;
+
+}
+
+#footer ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+#footer .social-media p, .links {
+    width: 100%;
+    margin: 10px;
+}
+
+#footer .social-media p {
+    margin-bottom: 20px;
+}
+
+#footer .social-media .links i {
+    font-size: 25px;
+    text-align: center;
+    background: var(--red-700);
+    color: var(--gray-100);
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    padding-top: 8px;
+}
+
+#footer .social-media .links i:hover{
+    transition: 0.4s ease-in-out;
+    color: var(--gray-750);
+}
+
+
+@media only screen and (max-width: 850px) {
+    /* Styles for phones */
+
+    #header .navigation i {
+        display: block;
+    }
+
+    #header .logo {
+        display: none;
+    }
+
+    #header .navigation {  
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    #header ul.desktop{
+        display: none;
+    }
+
+    .container {
+        padding-top: 200px;
+        padding-bottom: 25px;
+    }
+
+    .container .info{
+        width: 90%;
+    }
+
+    .container .info .heading span {
+        font-size: 40px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+    
+    .heading-secondary {
+        font-size: 20px;
+    }
+    
+    .paragraph {
+        font-size: 17.5px;
+    }
+    
+    .paragraph-secondary {
+        font-size: 12.5px;
+    }
+
+
+    #about {
+        display: block;
+        justify-content: none;
+        gap: 0;
+    }
+
+    #about .property {
+        display: block;
+        width: 100%;
+    }
+
+
+    #team .worker img {
+        width: 200px;
+    }
+
+    #team .worker {
+        display: none;
+        width: 100%;
+        margin: auto;
+    }
+
+
+    #team .worker:nth-child(1){
+        display: block;
+    }
+
+    #union {
+        display: block;
+        justify-content: none;
+        gap: 0;
+    }
+
+    #union .student-union {
+        display: block;
+        width: 100%;
+    }
+
+
+    #footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #footer .school, #footer .contact, #footer .social-media {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    #footer .school p {
+        text-align: center;
+    }
+
+    #footer .contact {
+        margin-top: 20px;
+    }
+
+    #footer .contact i {
+        margin: 0;
+        margin-bottom: -20px;
+        margin-left: -235px;
+    }
+
+
+    #footer .contact .email p span {
+        display: none;
+    }
+
+    #footer ul {
+        display: none;
+    }
+
+
+    .half {
+        width: 30% !important;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+
+    .heading {
+        font-size: 25px;
+    }
+    
+    .heading-secondary {
+        font-size: 17.5px;
+    }
+    
+    .paragraph {
+        font-size: 15px;
+    }
+    
+    .paragraph-secondary {
+        font-size: 10px;
+    }
+
+
+    #header ul.desktop li {
+        font-size: 22.5px;
+    }
+
+    #about {
+        width: 85%;
+    }
+
+    #union {
+        width: 85%;
+    }
+
+    #about .property{
+        border: none;
+    }
+
+    #about .property img {
+        width: 80px;
+    }
+
+    #team .worker {
+        width: 30%;
+    }
+
+    #team .worker img {
+        width: 170px;
+    }
+
+    #team .worker:nth-child(4) {
+        display: none;
+    }
+
+    #union {
+        gap: 5px;
+    }
+
+    #union .student-union img{
+        width: 120px;
+    }
+
+    #union .student-union {
+        width: 24%;
+    }
+
+
+    #footer .contact i {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    #footer .contact p {
+        margin-left: 60px;
+    }
+
+    
+
+    #footer .contact .email p {
+        margin-left: 65px;
+    }
+
+    #footer .contact .fa-location-dot {
+        margin-bottom: -5px;
+    }
+
+    #footer .school .heading {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    #footer .school ul {
+        display: none;
+    }
+
+    .half {
+        width: 60% !important;
+        margin-left: 60px;
+    }
+    
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1024px) {
+
+    .heading {
+        font-size: 22.5px;
+    }
+    
+    .heading-secondary {
+        font-size: 15px;
+    }
+    
+    .paragraph {
+        font-size: 12.5px;
+    }
+    
+    .paragraph-secondary {
+        font-size: 10px;
+    }
+
+    #header {
+        height: 65px;
+    }
+
+    #header .logo {
+        display: none;
+    }   
+
+    #header .navigation {
+        padding-top: 22.5px;
+    }
+
+    #header ul.desktop li {
+        font-size: 16px;
+    }
+
+    #about {
+        width: 85%;
+    }
+
+    #union {
+        width: 85%;
+    }
+
+    #about .property{
+        border: none;
+    }
+
+    #about .property img {
+        width: 80px;
+    }
+
+    #team .worker {
+        width: 30%;
+    }
+
+    #team .worker img {
+        width: 170px;
+    }
+
+    #team .worker:nth-child(4) {
+        display: none;
+    }
+
+    #union {
+        gap: 2.5px;
+    }
+
+    #union .student-union img{
+        width: 120px;
+    }
+
+    #union .student-union {
+        width: 20%;
+        border: none;
+    }
+
+
+    #footer .contact i {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    #footer .contact p {
+        width: 100%;
+        margin-left: 60px;
+    }
+
+    #footer .contact .email p {
+        margin-left: 65px;
+    }
+
+    #footer .contact .fa-location-dot {
+        margin-bottom: -5px;
+    }
+
+    #footer .school .paragraph {
+        font-size: 9px;
+        width: 100%;
+    }
+
+    #footer .school .heading {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    #footer .school ul {
+        display: none;
+    }
+
+    .half {
+        width: 60% !important;
+        margin-left: 60px;
+    }
+    
+}
+
+@media (max-width: 475px) {
+    .half {
+        width: 50% !important;
+        margin: auto;
+    }
+
+    #header {
+        height: 50px;
+    }
+
+    #header .navigation i {
+        margin-top: 2.5px;
+    }
+
+    #header ul.mobile li {
+        margin-top: 7.99px;
+    }
+
+    #footer .contact i {
+        display: none;
+    }
+
+    #footer .contact p {
+        margin-bottom: 15px;
+    }
+
+    #footer .social-media .links i {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        padding-top: 6px;
+    }
+
+    #footer .school h2, #footer .social-media h2 {
+        font-size: 20px;
+    }
+
+    #footer .school p, #footer .social-media p {
+        font-size: 14px;
+    }
+}
